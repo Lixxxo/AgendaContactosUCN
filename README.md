@@ -1,6 +1,7 @@
 
 # UCN Contact Agenda
 <p align="center"><img src="logo.png"></p>
+
 ### Mobile java application that obtains telephone directory records from UCN
 #### [(Universidad Católica del Norte)](http://admision01.ucn.cl/directoriotelefonicoemail/Default.aspx?ind=func/Default.aspx)
 
