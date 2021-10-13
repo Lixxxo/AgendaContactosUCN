@@ -6,9 +6,8 @@
 #### [(Universidad Católica del Norte)](http://admision01.ucn.cl/directoriotelefonicoemail/Default.aspx?ind=func/Default.aspx)
 
 ## Techstack
-This app uses these open projects to work properly
+This app uses these open projects to work
 - [jsoup: Java HTML Parser](jsoup.org)
-- [google/gson: A Java serialization/deserialization library](https://github.com/google/gson)
 
 ## Members
 - Luis Rojas Olivera, email: laro15mil@gmail.com.
