@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Contactos UCN</string>
+  <string name="app_name">Contactos UCN</string>
+  <string name="course_name">Desarrollo de Soluciones Móviles 2021 II</string>
+  <string name="logo_description">Escudo UCN Full Color</string>
 </resources>
