@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class LaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         imgLogo.setAnimation(swipeDownAnimation);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(MainActivity.this, LoadDataActivity.class);
+            Intent intent = new Intent(LaunchActivity.this, LoadDataActivity.class);
             startActivity(intent);
             finish();
         }, 4000);

@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
   android:background="#FFFFFF"
   android:backgroundTint="#3F51B5"
-  tools:context=".MainActivity">
+  tools:context=".LaunchActivity">
   <ImageView
     android:id="@+id/imgLogo"
     android:layout_width="312dp"
