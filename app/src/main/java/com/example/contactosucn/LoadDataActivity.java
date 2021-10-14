@@ -8,6 +8,6 @@ public class LoadDataActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_load_data);
+    setContentView(R.layout.activity_recycle_view);
   }
 }

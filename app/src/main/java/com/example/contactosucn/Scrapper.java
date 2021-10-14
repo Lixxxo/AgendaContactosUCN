@@ -18,6 +18,7 @@ public class Scrapper {
 
   private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
+
   public ArrayList<Contact> getContactsFromUrl() throws IOException {
 
     ArrayList<Contact> list;
@@ -62,6 +63,7 @@ public class Scrapper {
       if (list.size() % 15 == 0) {
 
         GSON.toJson(list, new FileWriter(String.valueOf(Paths.get("contacts.json"))));
+
         list.add(
             new Contact(id, name, charge, unit, email, phone, office, address));
 
