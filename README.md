@@ -7,7 +7,11 @@
 ## Techstack
 This app uses these open projects to work
 - [jsoup: Java HTML Parser](jsoup.org)
+- [google/gson: Json Parser](https://github.com/google/gson)
 
 ## Members
 - Luis Rojas Olivera, email: laro15mil@gmail.com.
 -
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
