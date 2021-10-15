@@ -33,7 +33,7 @@ public class LaunchActivity extends AppCompatActivity {
         imgLogo.setAnimation(swipeDownAnimation);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(LaunchActivity.this, LoadDataActivity.class);
+            Intent intent = new Intent(LaunchActivity.this, ContactListActivity.class);
             startActivity(intent);
             finish();
         }, 4000);

@@ -2,6 +2,7 @@ package com.example.contactosucn;
 
 
 
+import com.example.contactosucn.model.Contact;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;

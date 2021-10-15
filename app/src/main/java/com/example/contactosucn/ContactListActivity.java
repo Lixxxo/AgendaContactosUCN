@@ -3,7 +3,7 @@ package com.example.contactosucn;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoadDataActivity extends AppCompatActivity {
+public class ContactListActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
