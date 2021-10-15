@@ -1,4 +1,4 @@
-package com.example.contactosucn;
+package com.example.contactosucn.model;
 
 import androidx.annotation.NonNull;
 
