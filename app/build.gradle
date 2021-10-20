@@ -56,14 +56,26 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    implementation 'org.chromium.net:cronet-embedded:76.3809.111'
-    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.5.2'
+    // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+
+    // Only run in debug builds
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    implementation 'org.chromium.net:cronet-embedded:76.3809.111'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.5.2'
+
+    // ACRA Stuff
+    implementation("ch.acra:acra-mail:5.8.4")
+    implementation("ch.acra:acra-dialog:5.8.4")
+    implementation("ch.acra:acra-notification:5.8.4")
+    implementation("ch.acra:acra-toast:8.5.4")
 
     implementation 'org.jsoup:jsoup:1.10.3'
     implementation 'com.google.code.gson:gson:2.8.8'
