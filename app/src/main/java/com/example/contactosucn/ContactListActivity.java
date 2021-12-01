@@ -2,6 +2,7 @@ package com.example.contactosucn;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
 
 public class ContactListActivity extends AppCompatActivity {
 
@@ -9,5 +10,9 @@ public class ContactListActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_contact_list);
+
+    Toolbar toolbar = findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+
   }
 }
