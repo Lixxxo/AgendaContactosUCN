@@ -14,5 +14,6 @@ public class ContactListActivity extends AppCompatActivity {
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
+    // final FuncionarioViewModel model = ViewModelProvider
   }
 }
