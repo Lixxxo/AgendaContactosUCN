@@ -7,7 +7,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
+import java.util.List;
 
 
 public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
@@ -75,14 +75,28 @@ public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Vi
    * The ViewHolder
    */
   protected static class ViewHolder extends RecyclerView.ViewHolder {
-    // TODO: Add all atrributes
+
+    // for debugging
+    TextView id;
+
     TextView name;
+    TextView charge;
+    TextView unit;
+    TextView office;
     TextView email;
+    TextView phone;
+    TextView address;
 
     public ViewHolder(View view){
       super(view);
-      this.name = view.findViewById(R.id.rf_tv_nombre);
-      this.email = view.findViewById(R.id.rf_tv_email);
+      this.id = view.findViewById(R.id.rc_tv_id);
+      this.name = view.findViewById(R.id.rc_tv_name);
+      this.charge = view.findViewById(R.id.rc_tv_charge);
+      this.unit = view.findViewById(R.id.rc_tv_unit);
+      this.office = view.findViewById(R.id.rc_tv_office);
+      this.email = view.findViewById(R.id.rc_tv_email);
+      this.phone = view.findViewById(R.id.rc_tv_phone);
+      this.address = view.findViewById(R.id.rc_tv_address);
     }
   }
 }

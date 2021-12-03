@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <item name="rf_tv_name" type="id" />
-  <item name="rf_tv_email" type="id" />
+  <item name="rc_tv_name" type="id" />
+  <item name="rc_tv_charge" type="id" />
+  <item name="rc_tv_unit" type="id" />
+  <item name="rc_tv_phone" type="id" />
+  <item name="rc_tv_office" type="id" />
+  <item name="rc_tv_address" type="id" />
+  <item name="rc_tv_id" type="id" />
 </resources>
