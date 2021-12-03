@@ -9,8 +9,10 @@
 
   tools:context=".ContactListActivity">
 
+
   <include
-    android:id="@+id/toolbar"
+    android:id="@+id/am_mt_toolbar"
+
     layout="@layout/toolbar" />
 
   <androidx.recyclerview.widget.RecyclerView

@@ -3,16 +3,17 @@
   android:layout_width="match_parent"
   android:layout_height="?attr/actionBarSize"
   android:minWidth="?attr/actionBarSize"
-  android:background="@color/design_default_color_primary"
-  android:elevation="4dp"
-  style="@style/Theme.ContactosUCN.Toolbar"
 
+  android:elevation="4dp"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   app:contentInsetStart="0dp"
   app:contentInsetStartWithNavigation="0dp"
-
+  android:background="@color/colorPrimary"
+  app:theme="@style/Theme.ContactsUCN"
   app:title="@string/app_title"
   app:subtitle="@string/app_subtitle"
+  app:titleTextColor="@color/white"
+  app:subtitleTextColor="@color/white"
   >
 
 </androidx.appcompat.widget.Toolbar>

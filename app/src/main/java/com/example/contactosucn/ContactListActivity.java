@@ -1,6 +1,7 @@
 package com.example.contactosucn;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,10 +17,13 @@ public class ContactListActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    AppCompatDelegate.setDefaultNightMode(
+        AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
+
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_contact_list);
 
-    Toolbar toolbar = findViewById(R.id.toolbar);
+    Toolbar toolbar = findViewById(R.id.am_mt_toolbar);
     setSupportActionBar(toolbar);
 
     // get the list (RecycleView)

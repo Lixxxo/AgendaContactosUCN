@@ -11,12 +11,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textStyle="bold"
-    android:background="@color/design_default_color_primary"
+
     android:textColor="@color/white"
     android:shadowColor="@color/black"
     android:shadowDx="@integer/material_motion_duration_medium_2"
     android:shadowDy="@integer/material_motion_duration_long_2"
     android:textAppearance="?attr/textAppearanceListItem"
+    android:background="@color/colorPrimary"
     android:text="Nombre"
     android:gravity="center"
     android:textAlignment="gravity"
@@ -33,7 +34,7 @@
     android:text="id"
     android:gravity="end"
     android:textAlignment="gravity"
-    android:enabled="false"
+    android:visibility="gone"
     tools:ignore="HardcodedText" />
 
 
@@ -97,6 +98,7 @@
     android:gravity="end"
     android:textAlignment="gravity"
     tools:ignore="HardcodedText" />
+
 
   <TextView
     android:id="@+id/rc_tv_address"
