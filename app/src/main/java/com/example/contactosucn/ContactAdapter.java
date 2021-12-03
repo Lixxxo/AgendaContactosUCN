@@ -7,11 +7,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.contactosucn.model.Contact;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
 
+  private final List<Contact> contactList = new ArrayList<>();
 
   /**
    * Called when RecyclerView needs a new {@link ViewHolder} of the given type to represent an
@@ -68,7 +71,7 @@ public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Vi
    */
   @Override
   public int getItemCount() {
-    return 0;
+    return this.contactList.size();
   }
 
   /**
