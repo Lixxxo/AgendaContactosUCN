@@ -1,8 +1,10 @@
 package com.example.contactosucn;
 
+import android.view.LayoutInflater;
 import android.view.View;
 
 import android.view.ViewGroup;
+
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -14,7 +16,22 @@ import java.util.List;
 
 public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
 
-  private final List<Contact> contactList = new ArrayList<>();
+  private List<Contact> contactList = new ArrayList<>();
+
+  /**
+   * The Constructor
+   */
+  public ContactAdapter(){
+    // Nothing here
+  }
+
+  /**
+   * Populate contactList
+   * @param contactList
+   */
+  public void setContactList(final List<Contact> contactList) {
+    this.contactList = contactList;
+  }
 
   /**
    * Called when RecyclerView needs a new {@link ViewHolder} of the given type to represent an
@@ -38,7 +55,13 @@ public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Vi
   @NonNull
   @Override
   public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    return null;
+
+    // Step 1: Get the inflater
+    final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+    // Step 2: Inflate the row of Contact
+    final View contactView = layoutInflater.inflate(R.layout.row_contact, parent, false);
+    // Step 3: Build the ViewHolder
+    return new ViewHolder(contactView);
   }
 
   /**
@@ -61,7 +84,16 @@ public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Vi
    */
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    // Get Contact at position
+    final Contact contact = this.contactList.get(position);
 
+    holder.name.setText(contact.getName());
+    holder.id.setText(String.valueOf(contact.getId()));
+    holder.charge.setText(contact.getCharge());
+    holder.unit.setText(contact.getUnit());
+    holder.email.setText(contact.getEmail());
+    holder.phone.setText(contact.getPhone());
+    holder.address.setText(contact.getAddress());
   }
 
   /**
@@ -80,15 +112,15 @@ public final class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Vi
   protected static class ViewHolder extends RecyclerView.ViewHolder {
 
     // for debugging
-    TextView id;
+    private TextView id;
 
-    TextView name;
-    TextView charge;
-    TextView unit;
-    TextView office;
-    TextView email;
-    TextView phone;
-    TextView address;
+    private TextView name;
+    private TextView charge;
+    private TextView unit;
+    private TextView office;
+    private TextView email;
+    private TextView phone;
+    private TextView address;
 
     public ViewHolder(View view){
       super(view);
