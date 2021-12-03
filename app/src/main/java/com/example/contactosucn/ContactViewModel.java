@@ -33,15 +33,15 @@ public class ContactViewModel extends AndroidViewModel {
     // Lazy load
     if (this.contactList == null){
       this.contactList = new MutableLiveData<>();
-      this.loadFuncionarios();
+      this.loadContacts();
     }
     return this.contactList;
   }
 
   /**
-   * Read the Funcionarios from funcionarios.json
+   * Read the Contacts from contacts.json
    */
-  private void loadFuncionarios() {
+  private void loadContacts() {
 
     AsyncTask.execute(() ->{
       List<Contact> theContacts;
