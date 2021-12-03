@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:minHeight="?attr/minTouchTargetSize"
+  android:layout_height="wrap_content">
+
+  <TextView
+    android:id="@+id/rc_tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+
+    android:textColor="@color/white"
+    android:shadowColor="@color/black"
+    android:shadowDx="@integer/material_motion_duration_medium_2"
+    android:shadowDy="@integer/material_motion_duration_long_2"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:background="@color/colorPrimary"
+    android:text="Nombre"
+    android:gravity="center"
+    android:textAlignment="gravity"
+    tools:ignore="HardcodedText" />
+
+  <TextView
+    android:id="@+id/rc_tv_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="normal"
+    android:textColor="@color/white"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:background="@color/design_default_color_primary"
+    android:text="id"
+    android:gravity="end"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    tools:ignore="HardcodedText" />
+
+
+  <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/design_default_color_secondary_variant"
+    />
+
+  <TextView
+    android:id="@+id/rc_tv_charge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="Cargo"
+    tools:ignore="HardcodedText" />
+
+  <TextView
+    android:id="@+id/rc_tv_unit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="Unidad"
+    tools:ignore="HardcodedText" />
+
+  <TextView
+    android:id="@+id/rc_tv_office"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="" />
+
+  <View
+  android:layout_width="fill_parent"
+  android:layout_height="1dp"
+  android:background="@color/design_default_color_secondary_variant"
+  />
+
+  <TextView
+    android:id="@+id/rc_tv_email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="Email"
+    android:gravity="end"
+    android:textAlignment="gravity"
+    tools:ignore="HardcodedText" />
+
+  <TextView
+    android:id="@+id/rc_tv_phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="Teléfono"
+    android:gravity="end"
+    android:textAlignment="gravity"
+    tools:ignore="HardcodedText" />
+
+
+  <TextView
+    android:id="@+id/rc_tv_address"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="italic"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:text="Dirección"
+    android:gravity="end"
+    android:textAlignment="gravity"
+    tools:ignore="HardcodedText" />
+
+
+
+</LinearLayout>

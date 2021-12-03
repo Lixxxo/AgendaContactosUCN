@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">Contactos UCN</string>
+  <string name="course_name">Desarrollo de Soluciones Móviles 2021 II</string>
+  <string name="logo_description">Escudo UCN Full Color</string>
+
+  <string name="acra_dialog_tittle">Crash!!</string>
+  <string name="acra_dialog_comment">Sorry the app crashed/n send report!!</string>
+  <string name="app_title" >@string/app_name</string>
+  <string name="app_subtitle" >Universidad Católica del Norte</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:minHeight="?attr/minTouchTargetSize"
+  android:layout_height="wrap_content"
+
+  tools:context=".ContactListActivity">
+
+
+  <include
+    android:id="@+id/am_mt_toolbar"
+
+    layout="@layout/toolbar" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/am_rv_contacts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:listitem="@layout/row_contact"
+    app:layoutManager="LinearLayoutManager" />
+
+</LinearLayout>
