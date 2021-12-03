@@ -23,7 +23,7 @@ public class ContactViewModel extends AndroidViewModel {
 
   /**
    * The constructor of the class
-   * @param application the aplication to use
+   * @param application the application to use
    */
   public ContactViewModel(@NonNull Application application){
     super(application);
@@ -65,6 +65,8 @@ public class ContactViewModel extends AndroidViewModel {
         e.printStackTrace();
         return;
       }
+
+      this.contactList.postValue((Contact) theContacts);
     });
   }
 }
