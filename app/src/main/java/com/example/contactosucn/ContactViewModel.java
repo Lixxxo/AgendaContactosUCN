@@ -15,11 +15,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
+import java.util.Comparator;
 import java.util.List;
 
 
 public class ContactViewModel extends AndroidViewModel {
-  private MutableLiveData<Contact> contactList;
+
+  /**
+   * The {@link List} of {@link Contact}
+   */
+  private MutableLiveData<List<Contact>> contactList;
 
   /**
    * The constructor of the class
@@ -29,7 +34,7 @@ public class ContactViewModel extends AndroidViewModel {
     super(application);
   }
 
-  public MutableLiveData<Contact> getContacts(){
+  public MutableLiveData<List<Contact>> getContacts(){
     // Lazy load
     if (this.contactList == null){
       this.contactList = new MutableLiveData<>();
@@ -60,13 +65,21 @@ public class ContactViewModel extends AndroidViewModel {
         // The json object converter*
         final Gson gson = new GsonBuilder().create();
 
+        // Google Gson black magic
         theContacts = gson.fromJson(reader, contactListType);
+
+        // Sort by name
+        theContacts.sort(Comparator.comparing(Contact::getName));
+
+        // Remove the Contact without email
+        theContacts.removeIf(c -> c.getEmail() == null);
+
       } catch (IOException e){
         e.printStackTrace();
         return;
       }
 
-      this.contactList.postValue((Contact) theContacts);
+      this.contactList.postValue(theContacts);
     });
   }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:minHeight="?attr/minTouchTargetSize"
@@ -19,7 +20,7 @@
     android:text="Nombre"
     android:gravity="center"
     android:textAlignment="gravity"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
   <TextView
     android:id="@+id/rc_tv_id"
@@ -30,10 +31,10 @@
     android:textAppearance="?attr/textAppearanceListItem"
     android:background="@color/design_default_color_primary"
     android:text="id"
-    android:gravity="right"
+    android:gravity="end"
     android:textAlignment="gravity"
     android:enabled="false"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
 
   <View
@@ -49,7 +50,7 @@
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
     android:text="Cargo"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
   <TextView
     android:id="@+id/rc_tv_unit"
@@ -58,7 +59,8 @@
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
     android:text="Unidad"
-    ></TextView>
+    tools:ignore="HardcodedText" />
+
   <TextView
     android:id="@+id/rc_tv_office"
     android:layout_width="match_parent"
@@ -66,8 +68,7 @@
 
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
-    android:text=""
-    ></TextView>
+    android:text="" />
 
   <View
   android:layout_width="fill_parent"
@@ -82,9 +83,9 @@
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
     android:text="Email"
-    android:gravity="right"
+    android:gravity="end"
     android:textAlignment="gravity"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
   <TextView
     android:id="@+id/rc_tv_phone"
@@ -93,9 +94,9 @@
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
     android:text="Teléfono"
-    android:gravity="right"
+    android:gravity="end"
     android:textAlignment="gravity"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
   <TextView
     android:id="@+id/rc_tv_address"
@@ -104,9 +105,9 @@
     android:textStyle="italic"
     android:textAppearance="?attr/textAppearanceListItem"
     android:text="Dirección"
-    android:gravity="right"
+    android:gravity="end"
     android:textAlignment="gravity"
-    ></TextView>
+    tools:ignore="HardcodedText" />
 
 
 

@@ -1,22 +1,11 @@
 package com.example.contactosucn;
-
-import android.os.AsyncTask;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.contactosucn.model.Contact;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.lang.reflect.Type;
-import java.util.Comparator;
-import java.util.List;
+
 
 public class ContactListActivity extends AppCompatActivity {
 
@@ -43,56 +32,20 @@ public class ContactListActivity extends AppCompatActivity {
     // Union of Adapter + RecycleView
     recyclerView.setAdapter(this.contactAdapter);
 
-  }
+    // Instance ContactViewModel
+    ContactViewModel contactViewModel = ViewModelProvider
+        .AndroidViewModelFactory  // The Factory
+        .getInstance(this.getApplication()) // Singleton instance of Factory
+        .create(ContactViewModel.class); // Call the Constructor of ContactViewModel
 
-  /**
-   * Load the contacts.json
-   */
-  @Override
-  protected void onStart(){
-    super.onStart();
-
-    AsyncTask.execute(() ->{
-
-      List<Contact> theContacts;
-
-      // Read the contacts.json
-      try (final InputStream is = super
-          .getApplication()
-          .getAssets()
-          .open("contacts.json")){
-
-        // Get the type of List<Contact> with reflection
-        final Type contactListType = new TypeToken<List<Contact>>(){}.getType();
-
-        // the reader
-        final Reader reader = new InputStreamReader(is);
-
-        // The json object converter*
-        final Gson gson = new GsonBuilder().create();
-
-        theContacts = gson.fromJson(reader, contactListType);
-        reader.close();
-
-      } catch (IOException e){
-        e.printStackTrace();
-        return;
-      }
-      // Sort by name
-      theContacts.sort(Comparator.comparing(Contact::getName));
-
-      // Remove the Contact without email
-      theContacts.removeIf(c -> c.getEmail() == null);
-
-      // populate the Adapter
-      this.contactAdapter.setContactList(theContacts);
-
-      runOnUiThread(() -> {
-        // Notify / Update the GUI
-        this.contactAdapter.notifyDataSetChanged();
-      });
+    // Observe List of Contacts
+    contactViewModel.getContacts().observe(this, contactList -> {
+      // Set the contactList (from view model)
+      contactAdapter.setContactList(contactList);
+      // Refresh Recycler (ListView)
+      contactAdapter.notifyDataSetChanged();
     });
-  }
 
+  }
 
 }
