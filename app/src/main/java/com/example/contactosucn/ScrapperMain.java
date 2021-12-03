@@ -18,7 +18,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 
-public final class TheMain {
+public final class ScrapperMain {
 
   private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
